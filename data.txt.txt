@@ -1,0 +1,36 @@
+$$
+    Multi Line Comment 
+$$
+
+bitz _global = true;
+numz _count = 10;
+floatz _decimal = 3.14159;
+charz _letter = 'a';
+
+
+numz value = 5;
+numz value = 2;
+floatz result =2;
+
+
+result = value + valuee;  // Addition
+result = value - valuee;  // Subtraction
+result = value * valuee;  // Multiplication
+result = value / valuee;  // Division
+result = value % valuee;  // Modulus
+
+print<<Hello Hi!;
+
+
+result = value ^ value;  // 5^2 = 25
+floatz exponentresult = 2.5 ^ 3.0;  // 2.5^3 = 15.625
+
+_global = false;
+
+
+// -- Single Line Comment
+
+$$
+no uppercase only lowercase
+semicolon as terminator
+$$
