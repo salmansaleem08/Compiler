@@ -537,6 +537,85 @@ public class Compiler {
     }
     
     
+
+    public static class RE {
+
+           // Regular Expressions
+           private static final String PRINT_STATEMENT = "print<<[a-zA-Z]+;";
+           private static final String MULTILINE_COMMENT = "\\$\\$[\\s\\S]*?\\$\\$";
+           private static final String SINGLE_LINE_COMMENT = "//.*";
+           private static final String BOOL = "true|false";
+           private static final String CHAR = "'[a-z]'";
+           private static final String FLOAT = "\\d+\\.?\\d{1,5}";
+           private static final String INTEGER = "\\d+";
+           private static final String OPERATOR = "[+\\-*/%^]";
+           private static final String TERMINATOR = ";";
+           private static final String VARIABLE_NAME = "[a-zA-Z]+";
+           private static final String GLOBAL_VARIABLE_NAME = "_[a-zA-Z]+";
+           private static final String DATATYPE = "bitz|numz|floatz|charz";
+           private static final String LETTER = "[a-z]";
+           private static final String DIGIT = "\\d";
+
+           // Match functions
+           public static boolean matchPrintStatement(String input) {
+               return input.matches(PRINT_STATEMENT);
+           }
+           
+           public static boolean matchMultilineComment(String input) {
+               return input.matches(MULTILINE_COMMENT);
+           }
+           
+           public static boolean matchSingleLineComment(String input) {
+               return input.matches(SINGLE_LINE_COMMENT);
+           }
+           
+           public static boolean matchBoolean(String input) {
+               return input.matches(BOOL);
+           }
+           
+           public static boolean matchChar(String input) {
+               return input.matches(CHAR);
+           }
+           
+           public static boolean matchFloat(String input) {
+               return input.matches(FLOAT);
+           }
+           
+           public static boolean matchInteger(String input) {
+               return input.matches(INTEGER);
+           }
+           
+           public static boolean matchOperator(String input) {
+               return input.matches(OPERATOR);
+           }
+           
+           public static boolean matchTerminator(String input) {
+               return input.matches(TERMINATOR);
+           }
+           
+           public static boolean matchVariableName(String input) {
+               return input.matches(VARIABLE_NAME);
+           }
+           
+           public static boolean matchGlobalVariableName(String input) {
+               return input.matches(GLOBAL_VARIABLE_NAME);
+           }
+           
+           public static boolean matchDatatype(String input) {
+               return input.matches(DATATYPE);
+           }
+           
+           public static boolean matchLetter(String input) {
+               return input.matches(LETTER);
+           }
+           
+           public static boolean matchDigit(String input) {
+               return input.matches(DIGIT);
+           }
+       }
+
+    
+    
     public static String removeExtraSpaces(String input) {
         return input.replaceAll("\\s+", " ").trim();
     }
